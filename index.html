@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio de la Línea Recta - EXACER</title>
+  <!-- Configuración de MathJax para renderizado de fórmulas -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body style="background-color: #f1f5f9; margin: 0; padding: 20px;">
+
+  <!-- INICIO DEL CONTENIDO PARA MOODLE -->
+  <div style="max-width: 900px; margin: 0 auto; background-color: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 8px solid #0f766e; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1e293b; line-height: 1.6;">
+    
+    <!-- Encabezado -->
+    <div style="text-align: center; margin-bottom: 40px;">
+      <h1 style="color: #0f766e; font-size: 32px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">
+        La Línea Recta
+      </h1>
+      <p style="color: #64748b; font-size: 16px; margin-top: 15px; border-top: 1px solid #e2e8f0; padding-top: 15px; font-weight: 500;">
+        Análisis Geométrico y Analítico de la Recta en el Plano
+      </p>
+    </div>
+
+    <!-- Objetivo de Aprendizaje -->
+    <div style="margin-bottom: 35px; border-left: 5px solid #f97316; padding: 15px 25px; background-color: #fff7ed;">
+      <p style="margin: 0; font-weight: bold; color: #9a3412;">Objetivo de aprendizaje:</p>
+      <p style="margin: 5px 0 0 0;">Identificar las propiedades analíticas de la recta, calcular la pendiente entre dos puntos y diferenciar las relaciones de paralelismo y perpendicularidad bajo criterios formales.</p>
+    </div>
+
+    <!-- 1. Definición y Pendiente -->
+    <h2 style="color: #0f766e; font-size: 24px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 30px; font-weight: bold;">
+      1. La Recta como Lugar Geométrico
+    </h2>
+    <p style="text-align: justify;">
+      Según la bibliografía clásica (Lehmann, 2020), una recta es el lugar geométrico de todos los puntos en un plano tales que, al tomar cualquier par de ellos, la <strong>pendiente (m)</strong> se mantiene invariable. 
+    </p>
+
+    <div style="margin: 30px 0; background-color: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+      <h3 style="color: #0f766e; font-size: 20px; margin-top: 0;">Fórmula de la Pendiente</h3>
+      <p>Dados dos puntos $P_1(x_1, y_1)$ y $P_2(x_2, y_2)$, la pendiente $m$ se define como la razón del cambio en el eje vertical ($y$) sobre el cambio en el eje horizontal ($x$):</p>
+      <div style="text-align: center; font-size: 24px; margin: 25px 0; color: #0f766e; background: white; padding: 15px; border-radius: 8px; display: inline-block; width: 100%; box-sizing: border-box;">
+        $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+      </div>
+      <p style="font-size: 14px; color: #64748b; font-style: italic; margin-top: 10px;">
+        Importante: Si el denominador es cero ($x_1 = x_2$), la recta es vertical y su pendiente se considera "indefinida".
+      </p>
+    </div>
+
+    <!-- 2. Clasificación por Inclinación -->
+    <h2 style="color: #0f766e; font-size: 24px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 40px; font-weight: bold;">
+      2. Clasificación según la Pendiente
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+      <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #f0fdf4;">
+        <strong style="color: #16a34a; display: block; margin-bottom: 5px;">Pendiente Positiva ($m > 0$)</strong>
+        <p style="font-size: 14px; margin: 0;">La recta tiene un ángulo de inclinación agudo (menor a $90^\circ$). Al aumentar $x$, también aumenta $y$.</p>
+      </div>
+      <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #fef2f2;">
+        <strong style="color: #dc2626; display: block; margin-bottom: 5px;">Pendiente Negativa ($m < 0$)</strong>
+        <p style="font-size: 14px; margin: 0;">La recta tiene un ángulo de inclinación obtuso (mayor a $90^\circ$). Al aumentar $x$, disminuye $y$.</p>
+      </div>
+      <div style="padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #eff6ff;">
+        <strong style="color: #2563eb; display: block; margin-bottom: 5px;">Pendiente Nula ($m = 0$)</strong>
+        <p style="font-size: 14px; margin: 0;">La recta es horizontal. Todos los puntos tienen el mismo valor de $y$.</p>
+      </div>
+    </div>
+
+    <!-- 3. Relaciones entre Rectas -->
+    <h2 style="color: #0f766e; font-size: 24px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-top: 40px; font-weight: bold;">
+      3. Paralelismo y Perpendicularidad
+    </h2>
+    <p>Para el examen EXACER, es crucial memorizar estas dos condiciones analíticas:</p>
+    
+    <div style="overflow-x: auto; margin-top: 15px;">
+      <table style="width: 100%; border-collapse: collapse; min-width: 500px;">
+        <thead>
+          <tr style="background-color: #0f766e; color: white;">
+            <th style="padding: 15px; border: 1px solid #0d9488; text-align: left;">Tipo de Relación</th>
+            <th style="padding: 15px; border: 1px solid #0d9488; text-align: left;">Condición Analítica</th>
+            <th style="padding: 15px; border: 1px solid #0d9488; text-align: left;">Interpretación Visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 15px; border: 1px solid #e2e8f0;"><strong>Rectas Paralelas</strong></td>
+            <td style="padding: 15px; border: 1px solid #e2e8f0; font-family: monospace;">$m_1 = m_2$</td>
+            <td style="padding: 15px; border: 1px solid #e2e8f0;">Tienen la misma inclinación; nunca se tocan.</td>
+          </tr>
+          <tr style="background-color: #f8fafc;">
+            <td style="padding: 15px; border: 1px solid #e2e8f0;"><strong>Rectas Perpendiculares</strong></td>
+            <td style="padding: 15px; border: 1px solid #e2e8f0; font-family: monospace;">$m_1 \cdot m_2 = -1$</td>
+            <td style="padding: 15px; border: 1px solid #e2e8f0;">Se cruzan formando ángulos de $90^\circ$.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 4. Simulador EXACER -->
+    <div style="margin-top: 50px; padding: 30px; border: 2px solid #0f766e; border-radius: 12px; background-color: #ffffff;">
+      <h3 style="color: #0f766e; margin-top: 0; font-size: 22px; font-weight: bold;">Simulador EXACER</h3>
+      <p style="font-size: 17px; margin-bottom: 25px;">
+        <strong>Reactivo:</strong> Una recta $L_1$ pasa por los puntos $A(2, 5)$ y $B(4, 11)$. Se requiere encontrar la pendiente de una segunda recta $L_2$ que sea <strong>paralela</strong> a $L_1$.
+      </p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">A) $m = 2$</div>
+        <div style="padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #f0fdfa; border-color: #5eead4;">B) $m = 3$</div>
+        <div style="padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">C) $m = -3$</div>
+        <div style="padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">D) $m = \frac{1}{3}$</div>
+      </div>
+
+      <!-- Solución Explicada -->
+      <div style="margin-top: 25px; background-color: #f0fdfa; padding: 20px; border-radius: 8px; border: 1px solid #ccfbf1;">
+        <p style="margin: 0; color: #134e4a; font-size: 15px;">
+          <strong>Respuesta correcta: B.</strong><br>
+          <strong>Razonamiento:</strong> Primero calculamos la pendiente de $L_1$: 
+          $m = \frac{11 - 5}{4 - 2} = \frac{6}{2} = 3$. 
+          Como la recta $L_2$ es paralela, su pendiente debe ser idéntica ($m_1 = m_2$), por lo tanto, la respuesta es $3$.
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <!-- FIN DEL CONTENIDO PARA MOODLE -->
+
+</body>
+</html>
